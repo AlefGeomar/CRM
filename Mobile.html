@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoConnectCRM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Mobile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="menu-header">
+        <a href="#inicio">
+            <img src="AutoConnect_logo_completo-sem-fundo invert.png"
+                 alt="Logo AutoConnect"
+                 class="logo-AutoConnectCRM-nav"
+                 onerror="this.src='https://placehold.co/220/151515/FFFFFF?text=AutoConnectCRM'; this.onerror=null;">
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menu">
+            <i class="fas fa-bars mobile-nav-icon"></i>
+            <i class="fas fa-times mobile-nav-icon"></i>
+        </button>
+
+        <nav class="menu-nav">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#como-funciona">Como Funciona</a></li>
+                <li><a href="#solucoes">Soluções</a></li>
+            </ul>
+        </nav>
+        <div class="header-cta">
+            <a href="https:wa.me/5511987337792" target="_blank" rel="noopener noreferrer" class="cta-button">Fale Conosco</a>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <section class="inicio">
+            <section class="left-content">
+                <img src="AutoConnect_logo_completo-sem-fundo invert.png"
+                     alt="Logo AutoConnectCRM"
+                     class="logo-AutoConnectCRM"
+                     onerror="this.src='https://placehold.co/220x110/CCCCCC/FFFFFF?text=AutoConnectCRM+Logo'; this.onerror=null;">
+
+                <h1 class="main-title">
+                Conexões Inteligentes: Sua empresa no topo.
+                </h1>
+                <p class="main-subtitle">
+                Acelere o engajamento com seus clientes através de automações que realmente funcionam. Do WhatsApp ao E-mail, alcance, nutra e converta com a AutoConnectCRM.
+                </p>
+                    <div class="buttons-group">
+                    <a href="https:wa.me/5511987337792" target="_blank" rel="noopener noreferrer" class="cta-button">Entrar em contato</a>
+                   </div>
+            </section>
+
+            <aside class="right-content">
+               <div class="iphone-mockup">
+                   <div class="iphone-screen">
+                       <div class="dynamic-island-container">
+                           <div class="dynamic-island"></div>
+                       </div>
+                       
+                       <div class="iphone-lock-screen-ui">
+                           <header class="status-bar">
+                               <span>Operadora BR</span>
+                               <span>5G <span class="wifi-icon">📶</span></span>
+                           </header>
+
+                           <section class="time-date-display">
+                               <div id="time" class="time-text"></div>
+                               <div id="date" class="date-text"></div>
+                           </section>
+
+                           <section class="notifications-area">
+                               <a href="https://wa.me/5511987337792" target="_blank"  rel="noopener noreferrer" class="notification-link" id="whatsapp-notification-link">
+                                   <article class="initially-hidden"> 
+                                       <header class="notification-header">
+                                           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/240px-WhatsApp.svg.png" 
+                                                alt="Ícone do WhatsApp" class="app-icon"
+                                                onerror="this.src='https://placehold.co/20x20/25D366/FFFFFF?text=W'; this.onerror=null;">
+                                           <span class="app-name">WhatsApp</span>
+                                           <span class="notification-timestamp">agora</span>
+                                       </header>
+                                       <div class="notification-body">
+                                           <h3 class="notification-title">Conecte-se por WhatsApp</h3>
+                                           <p class="notification-text">Clique e veja como posso te ajudar atrair leads por WhatsApp.</p>
+                                       </div>
+                                   </article>
+                               </a>
+
+                               <a href="https://wa.me/5511987337792" target="_blank"  rel="noopener noreferrer" class="notification-link">
+                                   <article class="notification-item">
+                                       <header class="notification-header">
+                                           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Mail_%28iOS%29.svg/240px-Mail_%28iOS%29.svg.png" 
+                                                alt="Ícone do E-mail" class="app-icon"
+                                                onerror="this.src='https://placehold.co/20x20/007AFF/FFFFFF?text=M'; this.onerror=null;">
+                                           <span class="app-name">E-mail</span>
+                                           <span class="notification-timestamp">há 2 min</span>
+                                       </header>
+                                       <div class="notification-body">
+                                           <h3 class="notification-title">Entregue e-mails incríveis</h3>
+                                           <p class="notification-text">Veja o potencial que o e-mail para trazer para sua empresa.</p>
+                                       </div>
+                                   </article>
+                               </a>
+       
+                               <a href="https://wa.me/5511987337792" target="_blank"  rel="noopener noreferrer" class="notification-link">
+                                   <article class="notification-item">
+                                       <header class="notification-header">
+                                           <svg class="app-icon icon-push" viewBox="0 0 24 24" alt="Ícone de Notificação Push"><path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"></path></svg>
+                                           <span class="app-name">Fale com quem tem seu App</span>
+                                           <span class="notification-timestamp">há 5 min</span>
+                                       </header>
+                                       <div class="notification-body">
+                                           <p class="notification-text">Mantenha uma relação mais próxima com quem usa seu App.</p>
+                                       </div>
+                                   </article>
+                               </a>
+       
+                               <a href="https://wa.me/5511987337792" target="_blank"  rel="noopener noreferrer" class="notification-link">
+                                   <article class="notification-item">
+                                       <header class="notification-header">
+                                           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IMessage_logo.svg/240px-IMessage_logo.svg.png" 
+                                                alt="Ícone de SMS" class="app-icon"
+                                                onerror="this.src='https://placehold.co/20x20/4CD964/FFFFFF?text=S'; this.onerror=null;">
+                                           <span class="app-name">Seu código de acesso é:</span>
+                                           <span class="notification-timestamp">há 10 min</span>
+                                       </header>
+                                       <div class="notification-body">
+                                           <p class="notification-text">Use o SMS para transacionais com seus leads e clientes.</p>
+                                       </div>
+                                   </article>
+                               </a>
+                           </section>
+                           
+                           <footer class="iphone-footer-actions">
+                               <button class="action-button">
+                                   <svg class="action-icon" viewBox="0 0 24 24"><path d="M6,2H18V4H6M7,5H17V8H7M8,9H16V22H8V9M10,11V13H14V11H10Z"></path></svg>
+                               </button>
+                               <button class="action-button">
+                                   <svg class="action-icon" viewBox="0 0 24 24"><path d="M4,4H7L9,2H15L17,4H20A2,2 0 0,1 22,6V18A2,2 0 0,1 20,20H4A2,2 0 0,1 2,18V6A2,2 0 0,1 4,4M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9Z"></path></svg>
+                               </button>
+                           </footer>
+                       </div>
+                   </div>
+               </div>
+            </aside>
+        </section>
+        
+        <section id="automation-intro" class="section-container">
+            <h2 class="section-title">Veja como é fácil automatizar sua comunicação</h2>
+        </section>
+
+        <section id="pillars-section" class="section-container">
+            <h3 class="section-subtitle">Nossos Pilares de Automação para o Sucesso do seu Negócio</h3>
+            <p class="section-description-text">No mundo digital de hoje, a eficiência e a personalização são cruciais. A AutoConnectCRM oferece soluções sob medida para impulsionar o relacionamento com seus clientes e otimizar suas operações.</p>
+
+            <div class="pillar-cards">
+                <div class="pillar-card">
+                    <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                    <h4>Automação de CRM</h4>
+                    <h5>Otimize seu Relacionamento com o Cliente</h5>
+                    <p>Imagine ter todas as informações dos seus clientes organizadas e acessíveis, permitindo interações mais estratégicas e personalizadas. Com a automação de CRM da AutoConnectCRM, você centraliza dados, automatiza tarefas repetitivas e garante que nenhuma oportunidade de venda ou atendimento seja perdida.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Centralização de Dados: Tenha uma visão 360° do seu cliente.</li>
+                        <li><i class="fas fa-check-circle"></i> Gestão de Leads e Vendas: Acompanhe cada etapa do funil de vendas.</li>
+                        <li><i class="fas fa-check-circle"></i> Atendimento ao Cliente Aprimorado: Responda rapidamente e personalize o suporte.</li>
+                        <li><i class="fas fa-check-circle"></i> Segmentação Inteligente: Crie grupos específicos para campanhas direcionadas.</li>
+                    </ul>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="card-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h4>Campanhas de CRM</h4>
+                    <h5>Engaje seus Clientes com Campanhas Poderosas</h5>
+                    <p>Leve sua comunicação para o próximo nível com campanhas de marketing e vendas automatizadas e personalizadas. Do WhatsApp ao e-mail, criamos fluxos de comunicação que nutrem seus leads, fidelizam clientes e impulsionam suas vendas de forma eficiente e escalável.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> E-mail Marketing Eficaz: Crie newsletters e sequências de e-mails que convertem.</li>
+                        <li><i class="fas fa-check-circle"></i> WhatsApp Marketing Estratégico: Comunique-se instantaneamente com seus clientes.</li>
+                        <li><i class="fas fa-check-circle"></i> Jornadas do Cliente Personalizadas: Mapeie e automatize a experiência do seu cliente.</li>
+                        <li><i class="fas fa-check-circle"></i> Automação de Marketing: Crie fluxos inteligentes que entregam a mensagem certa, na hora certa.</li>
+                    </ul>
+                </div>
+
+                <div class="pillar-card">
+                    <div class="card-icon"><i class="fas fa-robot"></i></div>
+                    <h4>Agentes de IA</h4>
+                    <h5>Inteligência Artificial a Serviço do seu Negócio</h5>
+                    <p>Revolucione seu atendimento e suas operações com a inteligência artificial. Nossos Agentes de IA são projetados para otimizar interações, fornecer respostas instantâneas, qualificar leads e liberar sua equipe para focar em tarefas estratégicas que exigem um toque humano.</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Chatbots Inteligentes: Atendimento 24/7 com respostas rápidas e precisas.</li>
+                        <li><i class="fas fa-check-circle"></i> Qualificação de Leads: Identifique e priorize os leads mais promissores.</li>
+                        <li><i class="fas fa-check-circle"></i> Automação de Perguntas Frequentes (FAQs): Reduza o volume de chamadas e e-mails de suporte.</li>
+                        <li><i class="fas fa-check-circle"></i> agente de IA: tenha seu próprio agente com IA especilizado na sua empresa.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-final" class="section-container final-cta-section">
+            <h3 class="section-subtitle">Pronto para Transformar sua Empresa?</h3>
+            <p class="section-description-text">Não deixe sua comunicação e seus processos para depois. A AutoConnectCRM está aqui para te ajudar a implementar as melhores soluções em automação, CRM e inteligência artificial, garantindo que sua empresa esteja sempre à frente.</p>
+            <a href="https://wa.me/5511987337792" target="_blank"  rel="noopener noreferrer" class="button button-primary">Comece agora!</a>
+        </section>
+        </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
