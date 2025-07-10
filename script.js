@@ -1,82 +1,112 @@
-document.addEventListener('DOMContentLoaded', function() {
-    
-    // --- LÓGICA DO MENU RESPONSIVO ---
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Lógica para o menu mobile ---
     const menuToggle = document.querySelector('.menu-toggle');
     const menuNav = document.querySelector('.menu-nav');
-    const openIcon = document.querySelector('.menu-toggle .fa-bars');
-    const closeIcon = document.querySelector('.menu-toggle .fa-times');
 
     if (menuToggle && menuNav) {
         menuToggle.addEventListener('click', () => {
-            // Alterna a classe 'active' no menu de navegação
             menuNav.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
 
-            // Alterna a visibilidade dos ícones de abrir/fechar
-            const isActive = menuNav.classList.contains('active');
-            if (openIcon && closeIcon) {
-                openIcon.style.display = isActive ? 'none' : 'block';
-                closeIcon.style.display = isActive ? 'block' : 'none';
-            }
+        // Fechar menu ao clicar em um link
+        menuNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuNav.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
         });
     }
 
-
-    // --- CÓDIGO ORIGINAL DO RELÓGIO E NOTIFICAÇÃO ---
-    function updateClock() {
-        const timeZone = 'America/Sao_Paulo'; 
+    // --- Lógica para o relógio do iPhone mockup ---
+    function updateTime() {
         const now = new Date();
-
-        const timeOptions = {
-            timeZone: timeZone,
-            hour: '2-digit',
-            minute: '2-digit',
-            hour12: false 
-        };
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        const timeString = `${hours}:${minutes}`;
         
-        const dateOptions = {
-            timeZone: timeZone,
-            weekday: 'long', 
-            day: 'numeric', 
-            month: 'short' 
-        };
+        const options = { weekday: 'long', day: 'numeric', month: 'long' };
+        const dateString = now.toLocaleDateString('pt-BR', options);
 
-        const timeFormatter = new Intl.DateTimeFormat('pt-BR', timeOptions);
-        const dateFormatter = new Intl.DateTimeFormat('pt-BR', dateOptions);
-        
-        const timeElement = document.getElementById('time');
-        const dateElement = document.getElementById('date');
+        const timeElement = document.querySelector('#time');
+        const dateElement = document.querySelector('#date');
 
-        if (timeElement) {
-            timeElement.textContent = timeFormatter.format(now);
-        }
-        
-        if (dateElement) {
-            let formattedDate = dateFormatter.format(now).replace('.', '');
-            const parts = formattedDate.split(' '); 
-            if (parts.length > 3) { 
-                // Capitaliza o mês corretamente
-                const monthIndex = parts.findIndex(part => part === 'de') + 1;
-                if(parts[monthIndex]) {
-                   parts[monthIndex] = parts[monthIndex].charAt(0).toUpperCase() + parts[monthIndex].slice(1);
-                }
-            }
-            formattedDate = parts.join(' ');
-            dateElement.textContent = formattedDate;
+        if (timeElement) timeElement.textContent = timeString;
+        if (dateElement) dateElement.textContent = dateString.charAt(0).toUpperCase() + dateString.slice(1);
+
+        const whatsappNotification = document.querySelector('#whatsapp-notification-link');
+        const whatsappArticle = whatsappNotification ? whatsappNotification.querySelector('article') : null;
+        if (whatsappArticle && whatsappArticle.classList.contains('initially-hidden')) {
+            setTimeout(() => {
+                whatsappArticle.style.display = 'block'; 
+                whatsappArticle.classList.remove('initially-hidden');
+                whatsappArticle.classList.add('notification-item'); 
+            }, 3000); 
         }
     }
 
-    // Chama a função do relógio
-    updateClock(); 
-    setInterval(updateClock, 1000);
+    updateTime();
+    setInterval(updateTime, 60000);
 
-    // Lógica da notificação do WhatsApp
-    setTimeout(function() {
-        const whatsappNotificationLink = document.getElementById('whatsapp-notification-link');
-        const whatsappArticle = whatsappNotificationLink ? whatsappNotificationLink.firstElementChild : null;
-        
-        if (whatsappArticle) {
-            whatsappArticle.classList.remove('initially-hidden'); 
-            whatsappArticle.classList.add('notification-item'); 
+    document.querySelectorAll('.notification-link').forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault(); 
+            console.log('Notificação clicada:', link.querySelector('.notification-title')?.textContent || link.querySelector('.app-name')?.textContent);
+        });
+    });
+
+    // --- CÓDIGO PARA A FAQ ---
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const questionButton = item.querySelector('.faq-question');
+        questionButton.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // --- NOVO CÓDIGO PARA O CARROSSEL ---
+    const carouselTrackNew = document.getElementById('carouselTrackNew');
+    const slidesNew = document.querySelectorAll('.carousel-slide-new');
+    const dotsContainerNew = document.getElementById('carouselDotsNew');
+    let currentSlideNew = 0;
+
+    // Garante que os elementos do novo carrossel existem antes de tentar manipulá-los
+    if (carouselTrackNew && slidesNew.length > 0 && dotsContainerNew) {
+        function updateCarouselNew() {
+            carouselTrackNew.style.transform = `translateX(-${currentSlideNew * 100}%)`;
+            updateDotsNew();
         }
-    }, 3000); 
+
+        function updateDotsNew() {
+            dotsContainerNew.innerHTML = ''; // Limpa os pontos existentes
+            slidesNew.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.classList.add('carousel-dot-new');
+                if (index === currentSlideNew) {
+                    dot.classList.add('active');
+                }
+                dot.onclick = () => {
+                    currentSlideNew = index;
+                    updateCarouselNew();
+                };
+                dotsContainerNew.appendChild(dot);
+            });
+        }
+
+        // Função global para ser chamada pelos botões de navegação
+        window.moveSlideNew = (direction) => {
+            currentSlideNew = (currentSlideNew + direction + slidesNew.length) % slidesNew.length;
+            updateCarouselNew();
+        };
+
+        // Inicializa o carrossel
+        updateCarouselNew();
+    }
 });
