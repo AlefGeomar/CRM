@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Lógica para o menu mobile ---
+    
     const menuToggle = document.querySelector('.menu-toggle');
     const menuNav = document.querySelector('.menu-nav');
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             menuToggle.classList.toggle('active');
         });
 
-        // Fechar menu ao clicar em um link
+       
         menuNav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 menuNav.classList.remove('active');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Lógica para o relógio do iPhone mockup ---
+    
     function updateTime() {
         const now = new Date();
         let hours = now.getHours();
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- CÓDIGO PARA A FAQ ---
+   
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const questionButton = item.querySelector('.faq-question');
@@ -71,13 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- NOVO CÓDIGO PARA O CARROSSEL ---
+    
     const carouselTrackNew = document.getElementById('carouselTrackNew');
     const slidesNew = document.querySelectorAll('.carousel-slide-new');
     const dotsContainerNew = document.getElementById('carouselDotsNew');
     let currentSlideNew = 0;
 
-    // Garante que os elementos do novo carrossel existem antes de tentar manipulá-los
+    
     if (carouselTrackNew && slidesNew.length > 0 && dotsContainerNew) {
         function updateCarouselNew() {
             carouselTrackNew.style.transform = `translateX(-${currentSlideNew * 100}%)`;
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function updateDotsNew() {
-            dotsContainerNew.innerHTML = ''; // Limpa os pontos existentes
+            dotsContainerNew.innerHTML = ''; 
             slidesNew.forEach((_, index) => {
                 const dot = document.createElement('span');
                 dot.classList.add('carousel-dot-new');
@@ -100,13 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
 
-        // Função global para ser chamada pelos botões de navegação
+        
         window.moveSlideNew = (direction) => {
             currentSlideNew = (currentSlideNew + direction + slidesNew.length) % slidesNew.length;
             updateCarouselNew();
         };
 
-        // Inicializa o carrossel
+        
         updateCarouselNew();
     }
 });
