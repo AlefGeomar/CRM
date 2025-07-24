@@ -1,14 +1,12 @@
-/* ========================================================= */
-/* --- 1. VARIÁVEIS E ESTILOS GLOBAIS --- */
-/* ========================================================= */
+
 :root {
-    /* Cores (Não alteradas) */
+   
     --color-dark-bg: #000000;
     --color-gradient-light-bg: #737373;
     --color-text-light: #ffffff;
     --color-secondary-text: #cbd5e0;
-    --color-primary-purple: #8A2BE2; /* Roxo principal */
-    --color-dark-purple: #8120d09e; /* Roxo mais escuro/transparente */
+    --color-primary-purple: #8A2BE2; 
+    --color-dark-purple: #8120d09e; 
     --color-dark-purple-hover: #8220d0;
     --color-gray-dark: #1c1c1e;
     --color-notification-bg: rgba(28, 28, 30, 0.75);
@@ -16,10 +14,10 @@
     --color-border-light: rgba(177, 177, 177, 0.1);
     --color-card-background: #2a2a2a;
     --color-card-border: #3a3a3a;
-    --color-accent-blue: #ADD8E6; /* Azul claro de destaque */
+    --color-accent-blue: #ADD8E6; 
     --color-red-icon: #ef4444;
 
-    /* Espaçamento (Não alterado) */
+    
     --spacing-xs: 8px;
     --spacing-sm: 16px;
     --spacing-md: 24px;
@@ -27,7 +25,7 @@
     --spacing-xl: 60px;
     --spacing-xxl: 80px;
 
-    /* Tamanhos de Fonte (Não alterados) */
+   
     --font-size-base: 16px;
     --font-size-sm: 0.875rem;
     --font-size-md: 1rem;
@@ -52,7 +50,7 @@ body {
     background-image: linear-gradient(to right, var(--color-dark-bg), var(--color-gradient-light-bg));
     color: var(--color-text-light);
     min-height: 100vh;
-    overflow-x: hidden; /* Previne scroll horizontal */
+    overflow-x: hidden; 
 }
 
 a {
@@ -93,9 +91,7 @@ p.section-description-text {
     margin-bottom: var(--spacing-lg);
 }
 
-/* ========================================================= */
-/* --- 2. LAYOUT E UTILITÁRIOS --- */
-/* ========================================================= */
+
 .section-container {
     width: 100%;
     padding: var(--spacing-xl) 0;
@@ -111,10 +107,10 @@ p.section-description-text {
     width: 100%;
     max-width: 1152px;
     margin: 0 auto;
-    padding: 0 var(--spacing-sm); /* Espaçamento lateral para mobile */
+    padding: 0 var(--spacing-sm); 
 }
 
-/* Botões */
+
 .button {
     display: inline-block;
     padding: 12px 24px;
@@ -144,7 +140,7 @@ p.section-description-text {
     background-color: var(--color-dark-purple-hover);
 }
 
-.cta-button { /* Botão do Header */
+.cta-button { 
     padding: 10px 20px;
     background-color: var(--color-primary-purple);
     border-radius: 8px;
@@ -155,9 +151,7 @@ p.section-description-text {
     color: var(--color-text-light);
 }
 
-/* ========================================================= */
-/* --- 3. HEADER --- */
-/* ========================================================= */
+
 .menu-header {
     display: flex;
     justify-content: space-between;
@@ -176,10 +170,10 @@ p.section-description-text {
 }
 
 .logo-autoconnect-nav {
-    height: 50px; /* Tamanho para mobile */
+    height: 50px; 
 }
 
-/* --- Menu Mobile --- */
+
 .menu-toggle {
     background: none;
     border: none;
@@ -195,7 +189,7 @@ p.section-description-text {
 .menu-nav {
     position: fixed;
     top: 0;
-    left: 100%; /* Inicia fora da tela */
+    left: 100%; 
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.98);
@@ -210,25 +204,23 @@ p.section-description-text {
 .menu-nav ul { list-style: none; text-align: center; }
 .menu-nav li { margin: var(--spacing-md) 0; }
 .menu-nav a { font-size: 1.5rem; font-weight: 600; padding: var(--spacing-sm) 0; }
-.header-cta { display: none; } /* Esconde o botão CTA no mobile */
+.header-cta { display: none; } 
 
-/* ========================================================= */
-/* --- 4. HERO SECTION (INÍCIO) --- */
-/* ========================================================= */
+
 .hero-section {
-    padding-top: calc(70px + var(--spacing-lg)); /* 70px para altura do header + margem */
+    padding-top: calc(70px + var(--spacing-lg)); 
     padding-bottom: var(--spacing-xl);
 }
 
 .hero-section .main-content-wrapper {
     display: flex;
-    flex-direction: column; /* Layout de coluna para mobile */
+    flex-direction: column; 
     align-items: center;
     text-align: center;
     gap: var(--spacing-lg);
 }
 
-/* Ordem para mobile: mockup primeiro (order: 1), texto depois (order: 2) */
+
 .right-content { order: 1; }
 .left-content { order: 2; }
 
@@ -242,7 +234,7 @@ p.section-description-text {
 .buttons-group { display: flex; justify-content: center; }
 .buttons-group .button { width: 100%; max-width: 300px; }
 
-/* -- iPhone Mockup -- */
+
 .iphone-mockup {
     width: 280px;
     height: 570px;
@@ -313,12 +305,10 @@ p.section-description-text {
 .notifications-area > .notification-link:nth-child(3) > .notification-item { animation-delay: 0.2s; } 
 .notifications-area > .notification-link:nth-child(4) > .notification-item { animation-delay: 0.3s; } 
 
-/* ========================================================= */
-/* --- 5. OUTRAS SEÇÕES (Soluções, Exemplos, FAQ, etc.) --- */
-/* ========================================================= */
+
 .pillar-cards {
     display: grid;
-    grid-template-columns: 1fr; /* 1 coluna no mobile */
+    grid-template-columns: 1fr; 
     gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
 }
@@ -336,51 +326,51 @@ p.section-description-text {
 .pillar-card ul li { display: flex; align-items: flex-start; margin-bottom: 10px; font-size: var(--font-size-md); color: var(--color-secondary-text); }
 .pillar-card ul li .fa-check-circle { color: var(--color-primary-purple); margin-right: 10px; font-size: 1.1em; flex-shrink: 0; margin-top: 2px; }
 
-/* --- NOVO CARROSSEL ESTILOS --- */
+
 .carousel-container-new {
     position: relative;
     max-width: 1000px;
-    width: 100%; /* Adicionado: Garante que o contêiner ocupa a largura total disponível */
+    width: 100%; 
     margin: 4rem auto;
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
-    background-color: var(--color-card-background); /* Usando cor de fundo do card existente */
+    background-color: var(--color-card-background); 
 }
 .carousel-track-new {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 .carousel-slide-new {
-    flex: 0 0 100%; /* Alterado: Mais robusto para garantir 100% da largura do contêiner flex */
+    flex: 0 0 100%; 
     box-sizing: border-box;
-    padding: 0.5rem; /* Ajuste de padding para mobile */
+    padding: 0.5rem; 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* flex-shrink: 0; removido, já está em flex: 0 0 100%; */
-    max-height: 400px; /* Ajuste conforme necessário, evita que o conteúdo empurre muito para baixo */
-    overflow-y: auto; /* Permite rolagem dentro do slide se o conteúdo for muito longo */
-    -webkit-overflow-scrolling: touch; /* Rolagem suave no iOS */
-    scrollbar-width: none; /* Esconde a barra de rolagem para Firefox */
+  
+    max-height: 400px; 
+    overflow-y: auto; 
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: none; 
 }
 .carousel-slide-new::-webkit-scrollbar {
-    display: none; /* Esconde a barra de rolagem para navegadores Webkit */
+    display: none; 
 }
 
 .carousel-slide-new h3 {
-    font-size: 1.3rem; /* Fonte ligeiramente menor para títulos mobile */
-    margin-bottom: 0.5rem; /* Margem reduzida */
-    line-height: 1.2; /* Garante bom espaçamento entre linhas */
+    font-size: 1.3rem; 
+    margin-bottom: 0.5rem; 
+    line-height: 1.2; 
 }
 .carousel-slide-new p {
-    font-size: 0.85rem; /* Fonte ligeiramente menor para parágrafos mobile */
-    margin-bottom: 0.5rem; /* Margem reduzida */
+    font-size: 0.85rem; 
+    margin-bottom: 0.5rem; 
     word-break: break-word;
     overflow-wrap: break-word;
-    line-height: 1.4; /* Garante bom espaçamento entre linhas */
+    line-height: 1.4; 
 }
 .carousel-button-new {
     position: absolute;
@@ -389,8 +379,8 @@ p.section-description-text {
     background-color: rgba(138, 43, 226, 0.8);
     color: #E0E1DD;
     border: none;
-    padding: 0.2rem 0.4rem; /* Padding ainda menor */
-    font-size: 1rem; /* Tamanho da fonte do ícone menor */
+    padding: 0.2rem 0.4rem; 
+    font-size: 1rem; 
     cursor: pointer;
     z-index: 10;
     border-radius: 0.5rem;
@@ -401,40 +391,40 @@ p.section-description-text {
     transform: translateY(-50%) scale(1.05);
 }
 .carousel-button-new.prev {
-    left: 0.1rem; /* Mais próximo da borda */
+    left: 0.1rem; 
 }
 .carousel-button-new.next {
-    right: 0.1rem; /* Mais próximo da borda */
+    right: 0.1rem; 
 }
 .carousel-dots-new {
     display: flex;
     justify-content: center;
-    margin-top: 1rem; /* Margem superior reduzida */
-    gap: 0.5rem; /* Espaçamento reduzido entre os pontos */
+    margin-top: 1rem; 
+    gap: 0.5rem; 
 }
 .carousel-dot-new {
-    width: 8px; /* Pontos menores */
-    height: 8px; /* Pontos menores */
+    width: 8px; 
+    height: 8px; 
     border-radius: 50%;
-    background-color: var(--color-secondary-text); /* Cor para dots inativos */
+    background-color: var(--color-secondary-text); 
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 .carousel-dot-new.active {
-    background-color: var(--color-primary-purple); /* Roxo principal para dot ativo */
+    background-color: var(--color-primary-purple); 
 }
 .source {
-    font-size: 0.6rem; /* Fonte ainda menor para as fontes */
-    color: var(--color-secondary-text); /* Usando cor de texto secundária para fontes */
+    font-size: 0.6rem; 
+    color: var(--color-secondary-text); 
     margin-top: 0.5rem;
 }
 .highlight-text {
-    color: var(--color-primary-purple); /* Roxo principal para texto de destaque */
+    color: var(--color-primary-purple); 
     font-weight: 700;
 }
 
 
-/* FAQ */
+
 .faq-container { 
     max-width: 900px; 
     margin: 0 auto; 
@@ -454,11 +444,11 @@ p.section-description-text {
 }
 .faq-question { 
     width: 100%; 
-    padding: 15px 20px; /* Ajuste de padding para mobile */
+    padding: 15px 20px; 
     background: none; 
     border: none; 
     color: var(--color-text-light); 
-    font-size: 1rem; /* Ajuste de fonte para mobile */
+    font-size: 1rem; 
     font-weight: 600; 
     text-align: left; 
     cursor: pointer; 
@@ -467,10 +457,10 @@ p.section-description-text {
     align-items: center; 
 }
 .faq-question span {
-    word-break: break-word; /* Garante quebra de palavras longas */
-    overflow-wrap: break-word; /* Garante quebra de palavras longas */
-    flex-grow: 1; /* Permite que o texto ocupe o espaço disponível */
-    padding-right: 10px; /* Espaçamento entre texto e ícone */
+    word-break: break-word; 
+    overflow-wrap: break-word; 
+    flex-grow: 1; 
+    padding-right: 10px; 
 }
 .faq-question:hover { 
     color: var(--color-primary-purple); 
@@ -479,9 +469,9 @@ p.section-description-text {
     color: var(--color-primary-purple); 
 }
 .faq-question i { 
-    font-size: 1em; /* Ajuste de fonte para mobile */
+    font-size: 1em;
     transition: transform 0.3s ease; 
-    flex-shrink: 0; /* Evita que o ícone diminua */
+    flex-shrink: 0; 
 }
 .faq-item.active .faq-question i { 
     transform: rotate(180deg); 
@@ -493,18 +483,16 @@ p.section-description-text {
 }
 .faq-answer p { 
     margin-bottom: 0; 
-    font-size: 0.9rem; /* Ajuste de fonte para mobile */
+    font-size: 0.9rem; 
     text-align: left; 
 }
 .faq-item.active .faq-answer { 
-    max-height: 200px; /* Pode ser ajustado conforme o conteúdo */
-    padding: 0 20px var(--spacing-md) 20px; /* Ajuste de padding para mobile */
+    max-height: 200px; 
+    padding: 0 20px var(--spacing-md) 20px; 
 }
 .faq-cta { display: block; width: fit-content; margin: var(--spacing-lg) auto 0 auto; }
 
-/* ========================================================= */
-/* --- 6. FOOTER --- */
-/* ========================================================= */
+
 .footer-section { padding: var(--spacing-xl) 0; border-top: 1px solid var(--color-border-light); text-align: center; }
 .footer-content { display: flex; flex-direction: column; align-items: center; gap: var(--spacing-md); }
 .logo-autoconnect-footer { max-width: 180px; }
@@ -516,15 +504,13 @@ p.section-description-text {
 .copyright { font-size: var(--font-size-sm); color: var(--color-secondary-text); margin-top: var(--spacing-sm); }
 
 
-/* ========================================================= */
-/* --- 7. MEDIA QUERIES (RESPONSIVIDADE) --- */
-/* ========================================================= */
+
 @media (min-width: 768px) {
     .main-content-wrapper {
-        padding: 0 var(--spacing-lg); /* Aumenta o espaçamento lateral para tablets/desktops */
+        padding: 0 var(--spacing-lg); 
     }
 
-    /* --- Header Desktop --- */
+
     .menu-header {
         padding: var(--spacing-xs) var(--spacing-lg);
         align-items: center;
@@ -538,13 +524,13 @@ p.section-description-text {
         width: auto;
         height: auto;
         background-color: transparent;
-        flex-direction: row; /* Alinha os filhos (a <ul>) em linha */
+        flex-direction: row; 
         transition: none;
     }
      .menu-nav ul {
         display: flex;
         flex-direction: row;
-        gap: 32px; /* Espaçamento entre os links do menu */
+        gap: 32px; 
     }
      .menu-nav li {
         margin: 0;
@@ -554,23 +540,23 @@ p.section-description-text {
         display: block;
     }
     
-    /* --- Hero Section Desktop --- */
+
     .hero-section {
         padding-top: calc(80px + var(--spacing-xl));
     }
     .hero-section .main-content-wrapper {
-        flex-direction: row; /* Layout de linha para desktop */
+        flex-direction: row; 
         text-align: left;
         align-items: center;
         gap: var(--spacing-xl);
     }
     .left-content {
-        order: 1; /* Texto na esquerda */
+        order: 1;
         flex: 1;
         align-items: flex-start;
     }
     .right-content {
-        order: 2; /* Mockup na direita */
+        order: 2; 
         flex: 1;
         display: flex;
         justify-content: center;
@@ -580,33 +566,33 @@ p.section-description-text {
     .buttons-group { justify-content: flex-start; }
     .buttons-group .button { width: auto; }
 
-    /* --- Outras seções Desktop --- */
+    
     h2.section-title { font-size: 2.25rem; }
-    .pillar-cards { grid-template-columns: repeat(3, 1fr); } /* 3 colunas para os cards */
+    .pillar-cards { grid-template-columns: repeat(3, 1fr); } 
 
-    /* --- Carrossel e FAQ Desktop (revertendo ajustes mobile) --- */
+   
     .carousel-slide-new {
-        padding: 2rem; /* Padding original para desktop */
-        max-height: none; /* Remove max-height for desktop */
-        overflow-y: visible; /* Remove scroll for desktop */
+        padding: 2rem; 
+        max-height: none; 
+        overflow-y: visible; 
     }
     .carousel-slide-new h3 {
-        font-size: 2rem; /* Fonte original para desktop */
+        font-size: 2rem; 
         margin-bottom: 1rem;
     }
     .carousel-slide-new p {
-        font-size: 1.125rem; /* Fonte original para desktop */
+        font-size: 1.125rem; 
         margin-bottom: 1rem;
     }
     .carousel-button-new {
-        padding: 0.75rem 1rem; /* Padding original para desktop */
-        font-size: 2rem; /* Fonte original para desktop */
+        padding: 0.75rem 1rem; 
+        font-size: 2rem; 
     }
     .carousel-button-new.prev {
-        left: 1rem; /* Posição original para desktop */
+        left: 1rem; 
     }
     .carousel-button-new.next {
-        right: 1rem; /* Posição original para desktop */
+        right: 1rem; 
     }
     .carousel-dots-new {
         margin-top: 1.5rem;
@@ -617,20 +603,20 @@ p.section-description-text {
         height: 10px;
     }
     .source {
-        font-size: 0.8rem; /* Fonte original para desktop */
+        font-size: 0.8rem; 
         margin-top: 0.75rem;
     }
 
     .faq-question {
-        padding: 20px 25px; /* Padding original para desktop */
-        font-size: 1.1rem; /* Fonte original para desktop */
+        padding: 20px 25px; 
+        font-size: 1.1rem; 
     }
     .faq-answer p {
-        font-size: 1rem; /* Fonte original para desktop */
+        font-size: 1rem; 
     }
     .faq-item.active .faq-answer {
-        max-height: 200px; /* Pode ser ajustado conforme o conteúdo */
-        padding: 0 25px var(--spacing-md) 25px; /* Padding original para desktop */
+        max-height: 200px; 
+        padding: 0 25px var(--spacing-md) 25px; 
     }
 }
 
